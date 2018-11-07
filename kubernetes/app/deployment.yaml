@@ -31,7 +31,7 @@ spec:
             - "backend"
       initContainers:
         - name: app
-          image: us.gcr.io/univesp-201808/sou-authentication:1.0.1
+          image: us.gcr.io/univesp-201808/sou-authentication:latest
           command: ['/bin/sh', '-c', 'cp -rp /var/www/* /app/']
           imagePullPolicy: Always
           resources:
@@ -49,7 +49,7 @@ spec:
                 name: laravel-app-secrets
       containers:
         - name: php-fpm
-          image: us.gcr.io/univesp-201808/php-fpm:7.2.3
+          image: us.gcr.io/univesp-201808/php-fpm:latest
           imagePullPolicy: Always
           resources:
             limits:
